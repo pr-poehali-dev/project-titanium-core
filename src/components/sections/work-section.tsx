@@ -6,41 +6,45 @@ export function WorkSection() {
   return (
     <section
       ref={ref}
-      className="flex h-screen w-screen shrink-0 snap-start items-center px-6 pt-20 md:px-12 md:pt-0 lg:px-16"
+      className="relative flex h-screen w-screen shrink-0 snap-start items-center px-6 pt-20 md:px-12 md:pt-0 lg:px-16"
     >
-      <div className="mx-auto w-full max-w-7xl">
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center opacity-20"
+        style={{ backgroundImage: "url('https://cdn.poehali.dev/projects/103e55e9-b2a0-4e6b-b294-65671ca92ee6/files/82263cd4-7c53-4582-b7c7-b0090faf712f.jpg')" }}
+      />
+      <div className="relative z-10 mx-auto w-full max-w-7xl">
         <div
           className={`mb-12 transition-all duration-700 md:mb-16 ${
             isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"
           }`}
         >
           <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            Проекты
+            Пирамиды
           </h2>
-          <p className="font-mono text-sm text-foreground/60 md:text-base">/ Избранные работы</p>
+          <p className="font-mono text-sm text-foreground/60 md:text-base">/ Семь чудес света</p>
         </div>
 
         <div className="space-y-6 md:space-y-8">
           {[
             {
               number: "01",
-              title: "ТехноСтарт",
-              category: "Корпоративный портал",
-              year: "2024",
+              title: "Пирамида Хеопса",
+              category: "Гиза • ок. 2560 г. до н.э.",
+              year: "146 м",
               direction: "left",
             },
             {
               number: "02",
-              title: "АльфаТрейд",
-              category: "Финтех платформа",
-              year: "2024",
+              title: "Пирамида Хефрена",
+              category: "Гиза • ок. 2530 г. до н.э.",
+              year: "136 м",
               direction: "right",
             },
             {
               number: "03",
-              title: "МедиаПульс",
-              category: "Медиа сервис",
-              year: "2023",
+              title: "Пирамида Микерина",
+              category: "Гиза • ок. 2510 г. до н.э.",
+              year: "65 м",
               direction: "left",
             },
           ].map((project, i) => (
