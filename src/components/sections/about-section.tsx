@@ -84,10 +84,10 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
           style={{ transitionDelay: "750ms" }}
         >
           <MagneticButton size="lg" variant="primary" onClick={() => scrollToSection?.(4)}>
-            Задать вопрос
+            Пройти тест
           </MagneticButton>
-          <MagneticButton size="lg" variant="secondary" onClick={() => scrollToSection?.(1)}>
-            Великие пирамиды
+          <MagneticButton size="lg" variant="secondary" onClick={() => scrollToSection?.(5)}>
+            Написать нам
           </MagneticButton>
         </div>
       </div>
